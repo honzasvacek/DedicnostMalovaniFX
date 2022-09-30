@@ -1,24 +1,29 @@
 package com.example.dedicnostmalovanifx;
+
 import javafx.scene.shape.LineTo;
 import javafx.scene.shape.MoveTo;
 import javafx.scene.shape.Path;
 
-public class Ctverec extends GrafickyPrvek {
+public class Obdelnik extends GrafickyPrvek {
     int x;
     int y;
-    int velikost;
+    int velikostX;
+    int velikostY;
 
-    public Ctverec(int x, int y, int velikost){
+    public Obdelnik(int x, int y, int velikostX, int velikostY){
         this.x = x;
         this.y = y;
-        this.velikost = velikost;
+        this.velikostX = velikostX;
+        this.velikostY = velikostY;
+
     }
-    public Path namalujSe() {
+    public Path namalujSe(){
         Path path = new Path();
+
         MoveTo moveTo = new MoveTo(x, y);
-        LineTo line1 = new LineTo(x+velikost, y);
-        LineTo line2 = new LineTo(x + velikost, y + velikost);
-        LineTo line3 = new LineTo(x, y + velikost);
+        LineTo line1 = new LineTo(x+velikostX, y);
+        LineTo line2 = new LineTo(x + velikostX, y + velikostY);
+        LineTo line3 = new LineTo(x, y + velikostY);
         LineTo line4 = new LineTo(x,y);
 
         path.getElements().add(moveTo);
