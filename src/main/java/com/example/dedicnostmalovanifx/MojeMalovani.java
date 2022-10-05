@@ -15,7 +15,7 @@ public class MojeMalovani extends Application {
         mojeScena = new ArrayList<>();
         mojeScena.add(new GrafickyPrvek());
         //mojeScena.add(new Obdelnik(100,100, 300, 91));
-        mojeScena.add(new Triangle(100,100,200));
+        mojeScena.add(new Triangle(50,100,100));
     }
 
     @Override
