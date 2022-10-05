@@ -26,7 +26,7 @@ public class Obdelnik extends GrafickyPrvek {
         LineTo line3 = new LineTo(x, y + velikostY);
         LineTo line4 = new LineTo(x,y);
 
-        path.getElements().add(moveTo);
+        path.getElements().addAll(moveTo);
         path.getElements().addAll(line1, line2, line3, line4);
 
         return path;
